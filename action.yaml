@@ -1,0 +1,20 @@
+name: "Vioneta's Vioneta Agro Add-on Linter"
+description: 🚀 Vioneta's GitHub Action for linting Vioneta Agro Add-ons.
+author: Vioneta
+
+branding:
+  color: red
+  icon: thumbs-up
+
+inputs:
+  path:
+    description: Path to the add-on configuration (where config.json is)
+    required: true
+  community:
+    description: Enable Vioneta Agro Community Add-ons mode
+    default: "false"
+    required: false
+
+runs:
+  using: "docker"
+  image: "src/Dockerfile"
